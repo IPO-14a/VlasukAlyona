@@ -77,38 +77,38 @@
         text-align: center;
         }
 
-/* Clear floats after the header */
-.header:after {
-  content: "";
-  display: table;
-  clear: both;
-}
+/* Очистить поплавки после заголовка */
+    .header:after {
+        content: "";
+        display: table;
+        clear: both;
+        }
 
-/* Style the input */
-input {
-  border: none;
-  width: 75%;
-  padding: 10px;
-  float: left;
-  font-size: 16px;
-}
+/* Введите стиль ввода */
+    input {
+        border: none;
+        width: 75%;
+        padding: 10px;
+        float: left;
+        font-size: 16px;
+        }
 
-/* Style the "Add" button */
-.addBtn {
-  padding: 10px;
-  width: 25%;
-  background: #d9d9d9;
-  color: #555;
-  float: left;
-  text-align: center;
-  font-size: 16px;
-  cursor: pointer;
-  transition: 0.3s;
-}
+/* Стиль кнопки «Добавить» */
+    .addBtn {
+        padding: 10px;
+        width: 25%;
+        background: #d9d9d9;
+        color: #555;
+        float: left;
+        text-align: center;
+        font-size: 16px;
+        cursor: pointer;
+        transition: 0.3s;
+        }
 
-.addBtn:hover {
-  background-color: #bbb;
-}
+    .addBtn:hover {
+        background-color: #bbb;
+        }
     </style>
 	
 		   
