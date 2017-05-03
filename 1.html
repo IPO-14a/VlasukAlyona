@@ -3,17 +3,17 @@
 <head>
     <style>
 body {
-  margin: 0;
-  min-width: 250px;
+    margin: 0;
+    min-width: 250px;
 }
 /* Включить отступы и границы в общую ширину и высоту элемента */
 {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 /* Удалить поля и отступы из списка */
 ul {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
     </style>
 </head>
@@ -36,23 +36,23 @@ ul {
 var myNodelist = document.getElementsByTagName("LI");
 var i;
 for (i = 0; i < myNodelist.length; i++) {
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  myNodelist[i].appendChild(span);
+    var span = document.createElement("SPAN");
+    var txt = document.createTextNode("\u00D7");
+    span.className = "close";
+    span.appendChild(txt);
+    myNodelist[i].appendChild(span);
 }
 // Click on a close button to hide the current list item
 var close = document.getElementsByClassName("close");
 var i;
 for (i = 0; i < close.length; i++) {
-  close[i].onclick = function() {
-  var div = this.parentElement;
-    div.style.display = "none";
-  }
+    close[i].onclick = function() {
+    	var div = this.parentElement;
+    	div.style.display = "none";
+    }
 }
 // Add a "checked" symbol when clicking on a list item
 var list = document.querySelector('ul');
 list.addEventListener('click', function(ev) {
-	
+});
 </html>
