@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- This document was created with Syntext Serna Free. -->
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "docbookV4.5/docbookx.dtd" []>
+<article>
+  <title>Власюк Алёна ИПО-14 А</title>
+  <abstract>
+    <title>To Do List</title>
+  </abstract>
+  <abstract>
+    <title>Руководство программиста</title>
+    <para>Руководство программиста предусматривает описание сценариев взаимодействия с конечным продуктом и описывает назнечение разработки.</para>
+  </abstract>
+  <abstract>
+    <title>Сценарий 1 - Добавление элемента в список</title>
+    <para>Пользователь вводит текст своего &quot;дела&quot; в поле ввода и нажимает кнопку &quot;Add&quot;.</para>
+    <para>function newElement() {
+    </para>
+    <para>var li = document.createElement(&quot;li&quot;);
+    </para>
+    <para>var inputValue = document.getElementById(&quot;myInput&quot;).value;
+    </para>
+    <para>var t = document.createTextNode(inputValue);
+    </para>
+    <para>li.appendChild(t);
+    </para>
+    <para>if (inputValue === &apos;&apos;) {
+        </para>
+    <para>alert(&quot;You must write something!&quot;);
+    </para>
+    <para>} else {
+        </para>
+    <para>document.getElementById(&quot;myUL&quot;).appendChild(li);
+    </para>
+    <para>}
+    document.getElementById(&quot;myInput&quot;).value = &quot;&quot;;
+
+    </para>
+    <para>var span = document.createElement(&quot;SPAN&quot;);
+    </para>
+    <para>var txt = document.createTextNode(&quot;\u00D7&quot;);
+    </para>
+    <para>span.className = &quot;close&quot;;
+    </para>
+    <para>span.appendChild(txt);
+    </para>
+    <para>li.appendChild(span);
+
+    </para>
+    <para>for (i = 0; i &lt; close.length; i++) {
+        </para>
+    <para>close[i].onclick = function() {
+            </para>
+    <para>var div = this.parentElement;
+            </para>
+    <para>div.style.display = &quot;none&quot;;
+    </para>
+    <para>}
+  </para>
+    <para>}
+</para>
+    <para>}</para>
+  </abstract>
+  <abstract>
+    <title>Сценарий 2 - Нажатие кнопки удаления</title>
+    <para>Пользователь кликает на кнопке удаления &quot;Х&quot;, отслеживается запись на которой был произведен клик по кнопке и &quot;дело&quot; удаляется.</para>
+    <para>var close = document.getElementsByClassName(&quot;close&quot;);
+</para>
+    <para>var i;
+for (i = 0; i &lt; close.length; i++) {
+    </para>
+    <para>close[i].onclick = function() {
+    </para>
+    <para>var div = this.parentElement;
+    </para>
+    <para>div.style.display = &quot;none&quot;;
+    </para>
+    <para>}
+</para>
+    <para>}</para>
+  </abstract>
+  <abstract>
+    <title>Сценарий 3 - Нажатие на элемент списка</title>
+    <para>При нажатии на элемент списка происходит его вычеркивание т.е - отметка об успешном выполнении.</para>
+    <para>var list = document.querySelector(&apos;ul&apos;);
+</para>
+    <para>list.addEventListener(&apos;click&apos;, function(ev) {
+    </para>
+    <para>if (ev.target.tagName === &apos;LI&apos;) {
+        </para>
+    <para>ev.target.classList.toggle(&apos;checked&apos;);
+  </para>
+    <para>}
+</para>
+    <para>}, false);</para>
+  </abstract>
+</article>
