@@ -1,4 +1,10 @@
-// Create a "close" button and append it to each list item
+/**
+* Кнопка удаления
+*
+* Создание кнопки удаления и присоединение
+* к каждому пункту списка
+*
+*/
 var myNodelist = document.getElementsByTagName("LI");
 var i;
 for (i = 0; i < myNodelist.length; i++) {
@@ -8,8 +14,14 @@ for (i = 0; i < myNodelist.length; i++) {
     span.appendChild(txt);
     myNodelist[i].appendChild(span);
 }
-
-// Click on a close button to hide the current list item
+/**
+* Обработчик удаления
+*
+* Щелчек на кнопке удаление вызывает функцию
+* которая меняет css стиль записи на none
+* display : none
+*
+*/
 var close = document.getElementsByClassName("close");
 var i;
 for (i = 0; i < close.length; i++) {
@@ -18,16 +30,26 @@ for (i = 0; i < close.length; i++) {
     div.style.display = "none";
     }
 }
-
-// Add a "checked" symbol when clicking on a list item
+/**
+* Галочка
+*
+* Создание метки "галочка" при клике на созданный
+* элемент списка.
+*
+*/
 var list = document.querySelector('ul');
 list.addEventListener('click', function(ev) {
     if (ev.target.tagName === 'LI') {
         ev.target.classList.toggle('checked');
   }
 }, false);
-
-// Create a new list item when clicking on the "Add" button
+/**
+* Новый элемент
+*
+* Создание нового элемента списка при клике на
+* кнопку "Add". Элемент добавляется в конец списка.
+*
+*/
 function newElement() {
     var li = document.createElement("li");
     var inputValue = document.getElementById("myInput").value;
