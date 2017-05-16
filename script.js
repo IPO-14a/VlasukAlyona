@@ -41,7 +41,7 @@ var list = document.querySelector('ul');
 list.addEventListener('click', function(ev) {
     if (ev.target.tagName === 'LI') {
         ev.target.classList.toggle('checked');
-  }
+    }
 }, false);
 /**
 * Новый элемент
@@ -72,6 +72,6 @@ function newElement() {
         close[i].onclick = function() {
             var div = this.parentElement;
             div.style.display = "none";
+        }
     }
-  }
 }
