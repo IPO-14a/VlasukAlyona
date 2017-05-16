@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    max-width: 250px;
+    width: 200px;
 }
 
 /* Include the padding and border in an element's total width and height */
